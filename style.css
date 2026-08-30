@@ -1,4 +1,6 @@
 /* ================= GLOBAL RESET ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -70,17 +72,19 @@ body {
 
 /* ================= HERO ================= */
 
-.hero {
+.hero{
     position: relative;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
     overflow: hidden;
 
-    background: linear-gradient(
-        rgba(255,255,255,0.55),
-        rgba(255,255,255,0.55)
-    ),
-    url("images/saujanya.png") center/cover no-repeat;
+    background-image:
+        linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.55)),
+        url("images/saujanya.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -190,7 +194,6 @@ body {
 }
 
 /* ===== GOOGLE FONT ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     margin:0;
@@ -376,19 +379,47 @@ a{
 /* ===== RESPONSIVE ===== */
 @media (max-width:768px){
 
+    .navbar{
+        flex-direction: column;
+        padding: 15px 5%;
+        gap: 12px;
+    }
+
+    .navbar ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero{
+        background-position: 70% center;
+    }
+
+    .hero-content{
+        left: 5%;
+        top: 50%;
+        width: 90%;
+        max-width: none;
+    }
+
+    .hero-content h1{
+        font-size: 38px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
+        white-space: normal;
+    }
+
     .section{
-        padding:60px 6%;
+        padding: 60px 6%;
     }
 
     .section-layout{
-        grid-template-columns:1fr;
-    }
-
-    .section-title{
-        font-size:30px;
+        grid-template-columns: 1fr;
     }
 
     .section-image img{
-        max-height:280px;
+        max-height: 280px;
     }
 }
